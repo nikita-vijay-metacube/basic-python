@@ -8,7 +8,7 @@ try:
     if len(inputPassword) < 8:
         raise ValueInvalidPasswordExceptionError
     else:
-        print("You enterred valid password: ", inputPassword)
+        print("You entered valid password: ", inputPassword)
 except ValueInvalidPasswordExceptionError:
         print (ValueInvalidPasswordExceptionError.__doc__)
         print("Please Enter password having length equal to or more than 8!")

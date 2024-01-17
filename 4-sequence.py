@@ -1,50 +1,48 @@
-my_list = ['p', 'r', 'o', 'b', 'e']
-n_list = ["Happy", [2, 0, 1, 5]]
-print(n_list[1][3])
-odd = [1, 9, 2,6,4,9,0,12,45,34,23,56]
-odd.insert(1,3)
+def listComment():
+    """\n***Through List***\n"""
+def setComment():
+    """\n***Using Set***\n"""
+    
+print (listComment.__doc__)
 
-print(odd)
-odd[2:2] = [5, 7]
-print(odd)
 
-# Generate list for store countries
-countries = ['Nepal','Bhutan','China']
-print(f"Before add:{countries}")
+countries = ['India','Nepal','Russia']
+print(f"Contry list before addding the new country:{countries}")
 
 # Append new country at the end of list
-countries.append('India')
+countries.append('England')
 print(f"After add:{countries}")
 
 # Remove any country using index
 del countries[2]
-print(f"After add:{countries}")
+print(f"After Removing 2nd indexed country:{countries}")
 
 # Add new country is the middle of list
-mid = len(countries) //2
+mid = len(countries)
 print('Length',len(countries))
 print('Mid',mid)
 countries.insert(mid,'USA')
 print(f"After insert into middle:{countries}")
 
+##Using Set
+print (setComment.__doc__)
 
 
-
-##
-countriesSet = {'Nepal','Bhutan','China','Venice'}
+countriesSet = {'India','Nepal','Russia','Japan'}
 print('Country Set:',countriesSet)
 
 # Add a new coutnry at the end or set
-countriesSet.add('India')
-print('Country Set After Adding New Country:',countriesSet)
+countriesSet.add('England')
+print('Country Set after adding new Ccountry:',countriesSet)
 
 # Remove any country from set
-countriesSet.remove('Nepal')
-print('Country Set After Removing Country:',countriesSet)
+countriesSet.remove('Russia')
+print('Country Set after removing Country:',countriesSet)
 
 # Add a new country in the middle of set
 middle_index = len(countriesSet) // 2
-new_country = {'Shri Lanka'}
+new_country = {'Dubai'}
+print("middle_index-", middle_index)
 first_half = list(countriesSet)[:middle_index]
 second_half = list(countriesSet)[middle_index:]
 new_set = set(first_half + list(new_country) + second_half)

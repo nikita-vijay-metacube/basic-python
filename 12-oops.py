@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-"""Encapsulation Assignment"""
+print("""\n\n***Encapsulation Assignment***\n\n""")
 
 class Patient: 
     def __init__(self):
@@ -22,11 +22,12 @@ secondPatient = Patient()
 secondPatient.setData(2,'lokesh', 2)
 firstList = firstPatient.getData()
 secondList = secondPatient.getData()
+print("Patient class objects initialized & the objects are as follow:: \n")
 print("Patient",firstList['id'],  "| Name:",  firstList['name'],  " ssn:",  firstList['ssn'])
 print("Patient",secondList['id'],  "| Name:",  secondList['name'],  " ssn:",  secondList['ssn'])
 
 
-print("""Abstract Class Assignment""")
+print("""\n\n***Abstract Class Assignment***\n\n""")
 
 
 class TouchScreenLaptop(ABC):
@@ -36,7 +37,7 @@ class TouchScreenLaptop(ABC):
 
     @abstractmethod
     def click(self):
-        print("1134")
+        print("TouchScreenLaptop click() method called!!")
         pass
 # a = TouchScreenLaptop()
 
@@ -50,29 +51,13 @@ class dell(TouchScreenLaptop):
 
 class hpnotebook(hp):
     def click(self):
-        print("34")
+        print("hpnotebook function called!!")
         super().click()
         pass
         
 class dellnotebook(dell):
     def click(self):
-        print("15")
+        print("dellnotebook function called")
 
 hpnotebookObj = hpnotebook()
 hpnotebookObj.click()
-
-
-class Human:
-
-    def __init__(self):
-        self.name = 'Guido'
-        self.head = self.Head()
-    
-    class Head:
-        def talk(self):
-        	return 'talking...'
-
-    # guido = Human()
-guidoh = Human().head
-#  print (guido.name)
-print (guidoh.talk())
